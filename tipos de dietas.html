@@ -1,0 +1,81 @@
+<title>Tipos de dietas</title>
+  <link rel="stylesheet" href="diseño.Css">
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const tipo = params.get("tipo");
+
+    if (tipo) {
+      document.getElementById(tipo).style.display = "block";
+    }
+  });
+</script>
+
+<!-- Etiqueta table, th, td -->
+<h2>Mamíferos carnívoros</h2>
+  <table class="tabla" id="carnivoros" style="display:none;">
+    <thead>
+      <tr><th>Nombre común</th><th>Nombre científico</th><th>Familia</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Jaguar</td><td><em>Panthera onca</em></td><td>Felidae</td></tr>
+      <tr><td>Puma</td><td><em>Puma concolor</em></td><td>Felidae</td></tr>
+      <tr><td>Ocelote</td><td><em>Leopardus pardalis</em></td><td>Felidae</td></tr>
+      <tr><td>Margay (Tigrillo)</td><td><em>Leopardus wiedii</em></td><td>Felidae</td></tr>
+      <tr><td>Jaguarundi</td><td><em>Herpailurus yagouaroundi</em></td><td>Felidae</td></tr>
+      <tr><td>Zorra gris</td><td><em>Urocyon cinereoargenteus</em></td><td>Canidae</td></tr>
+      <tr><td>Cacomixtle</td><td><em>Bassariscus sumichrasti</em></td><td>Procyonidae</td></tr>
+      <tr><td>Tayra</td><td><em>Eira barbara</em></td><td>Mustelidae</td></tr>
+      <tr><td>Zorrillo listado</td><td><em>Conepatus semistriatus</em></td><td>Mephitidae</td></tr>
+    </tbody>
+  </table>
+
+    <h2>Mamíferos herbívoros</h2>
+  <table class="tabla" id="herbivoros" style="display:none;">
+    <thead>
+      <tr><th>Nombre común</th><th>Nombre científico</th><th>Familia</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Venado cola blanca</td><td><em>Odocoileus virginianus</em></td><td>Cervidae</td></tr>
+      <tr><td>Pecarí de collar</td><td><em>Pecari tajacu</em></td><td>Tayassuidae</td></tr>
+      <tr><td>Pecarí de labios blancos</td><td><em>Tayassu pecari</em></td><td>Tayassuidae</td></tr>
+      <tr><td>Tapir centroamericano</td><td><em>Tapirus bairdii</em></td><td>Tapiridae</td></tr>
+      <tr><td>Tepezcuintle (Paca)</td><td><em>Cuniculus paca</em></td><td>Cuniculidae</td></tr>
+      <tr><td>Agutí</td><td><em>Dasyprocta punctata</em></td><td>Dasyproctidae</td></tr>
+      <tr><td>Ardilla de Deppe</td><td><em>Sciurus deppei</em></td><td>Sciuridae</td></tr>
+      <tr><td>Tuza</td><td><em>Geomys tropicalis</em></td><td>Geomyidae</td></tr>
+      <tr><td>Ratón espinoso</td><td><em>Heteromys desmarestianus</em></td><td>Heteromyidae</td></tr>
+      <tr><td>Mono araña</td><td><em>Ateles geoffroyi</em></td><td>Atelidae</td></tr>
+      <tr><td>Mono aullador negro</td><td><em>Alouatta pigra</em></td><td>Atelidae</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Mamíferos omnívoros</h2>
+  <table class="tabla" id="omnivoros" style="display:none;">
+    <thead>
+      <tr><th>Nombre común</th><th>Nombre científico</th><th>Familia</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Tlacuache común</td><td><em>Didelphis marsupialis</em></td><td>Didelphidae</td></tr>
+      <tr><td>Tlacuache lanudo</td><td><em>Caluromys derbianus</em></td><td>Didelphidae</td></tr>
+      <tr><td>Mapache</td><td><em>Procyon lotor</em></td><td>Procyonidae</td></tr>
+      <tr><td>Cacomixtle</td><td><em>Bassariscus sumichrasti</em></td><td>Procyonidae</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Mamíferos insectívoros</h2>
+  <table class="tabla" id="insectivoros" style="display:none;">
+    <thead>
+      <tr><th>Nombre común</th><th>Nombre científico</th><th>Familia</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Murciélago nectarívoro</td><td><em>Glossophaga soricina</em></td><td>Phyllostomidae</td></tr>
+      <tr><td>Murciélago pescador</td><td><em>Noctilio leporinus</em></td><td>Noctilionidae</td></tr>
+      <tr><td>Murciélago vampiro</td><td><em>Desmodus rotundus</em></td><td>Phyllostomidae</td></tr>
+      <tr><td>Murciélago orejón</td><td><em>Corynorhinus mexicanus</em></td><td>Vespertilionidae</td></tr>
+      <tr><td>Oso hormiguero menor</td><td><em>Tamandua mexicana</em></td><td>Myrmecophagidae</td></tr>
+      <tr><td>Armadillo de nueve bandas</td><td><em>Dasypus novemcinctus</em></td><td>Dasypodidae</td></tr>
+    </tbody>
+  </table>
+
+<!-- Y así para omnivoros e insectivoros -->

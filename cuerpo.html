@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="diseño.css">
+</head>
+
+<body class="contenido">
+  <h1>Selva Lacandona</h1>
+
+  <!-- Etiquetas mark, abbr, blockquote -->
+  <p>
+    La <mark>Selva Lacandona</mark> está ubicada en el 
+    <mark>sureste de Chiapas, México</mark>, cerca de la frontera con 
+    <mark>Guatemala</mark>. Tiene una extensión aproximada de 1.8 millones de hectáreas y se caracteriza por su clima cálido húmedo con lluvias abundantes durante todo el año. 
+    Es una selva tropical alta con vegetación perennifolia, rica en árboles como la caoba, el cedro y la ceiba.
+    Es uno de los ecosistemas más biodiversos de México y Mesoamérica. 
+    Alberga más de 210 especies de mamíferos, entre ellos el 
+    <abbr title="Panthera onca">Jaguar</abbr>, el 
+    <abbr title="Tapirus bairdii">Tapir</abbr>, el 
+    <abbr title="Ateles geoffroyi">Mono araña</abbr>, el 
+    <abbr title="Pecari tajacu">Pecarí</abbr> y una gran variedad de murciélagos. 
+    También se han registrado más de 340 especies de aves, así como reptiles, anfibios y miles de especies de plantas.
+    Está habitada por pueblos indígenas como los lacandones, choles, tseltales, tsotsiles y tojolabales, quienes conservan tradiciones ancestrales y una relación espiritual con el bosque. 
+    <blockquote cite="https://es.Wikipedia.org">
+    La selva ha perdido más del 70% de su cobertura original desde los años 70 debido a la deforestación, la ganadería y la agricultura intensiva.
+    Existen áreas protegidas como Montes Azules, Lacan-Tun y Nahá, y esfuerzos de conservación impulsados por instituciones como CONABIO y SEMARNAT. 
+    La Selva Lacandona es clave para la regulación climática, la conectividad ecológica y la preservación de especies únicas en el mundo.
+    </blockquote>
+  </p>
+
+  <!-- Etiqueta embed-->
+  <embed type="video/webm" src="extras/video selva.mp4" width="600" height="600">
+    
+  <!-- Etiqueta map-->
+  <!-- Imagen con mapa interactivo -->
+  <img src="extras/fauna de la selva.jpg" alt="Workplace" usemap="#workmap">
+
+  <map name="workmap">
+    <area shape="rect" coords="0,0,165,100" alt="Armadillo" href="https://es.wikipedia.org/wiki/Dasypodidae">
+    <area shape="rect" coords="0,100,150,210" alt="Hocofaisan" href="https://es.wikipedia.org/wiki/Crax_rubra">
+    <area shape="rect" coords="0,210,155,345" alt="Pecari de collar" href="https://es.wikipedia.org/wiki/Dicotyles_tajacu">
+    <area shape="rect" coords="165,0,260,105" alt="Cacomixtle tropical" href="https://es.wikipedia.org/wiki/Bassariscus_sumichrasti">
+    <area shape="rect" coords="150,105,260,215" alt="Mono araña" href="https://es.wikipedia.org/wiki/Ateles">
+    <area shape="rect" coords="155,215,320,345" alt="Jaguar" href="https://es.wikipedia.org/wiki/Panthera_onca">
+    <area shape="rect" coords="260,0,370,105" alt="Coati" href="https://es.wikipedia.org/wiki/Nasua">
+    <area shape="rect" coords="260,105,400,215" alt="Ocelote" href="https://es.wikipedia.org/wiki/Leopardus_pardalis">
+    <area shape="rect" coords="320,215,485,345" alt="Mapache" href="https://es.wikipedia.org/wiki/Procyon">
+    <area shape="rect" coords="370,0,495,105" alt="Tepezcuintle" href="https://es.wikipedia.org/wiki/Cuniculus_paca">
+    <area shape="rect" coords="400,105,495,215" alt="Tigrillo" href="https://es.wikipedia.org/wiki/Leopardus_tigrinus">
+    <area shape="rect" coords="495,0,700,105" alt="Venado de cola blanca" href="https://en.wikipedia.org/wiki/White-tailed_deer">
+    <area shape="rect" coords="495,105,700,210" alt="Tapir" href="https://es.wikipedia.org/wiki/Tapirus">
+    <area shape="rect" coords="485,215,700,345" alt="Leoncillo" href="https://es.wikipedia.org/wiki/Herpailurus_yagouaroundi">
+  </map>
+
+  <!-- Etiqueta iframe-->
+  <!-- Aquí se agrega el mapa en un rectángulo ancho -->
+  <div class="mapa-contenedor">
+    <iframe
+      src="https://www.openstreetmap.org/export/embed.html?bbox=-91.6%2C16.7%2C-91.4%2C16.8&amp;layer=mapnik&amp;marker=16.75%2C-91.5"
+      loading="lazy"
+      title="Mapa Selva Lacandona">
+    </iframe>
+  </div>
+
+</body>
+</html>

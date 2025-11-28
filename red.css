@@ -1,0 +1,28 @@
+.social-nav {
+  display: flex;
+  flex-direction: column; /* hace la lista vertical */
+  gap: 12px;
+}
+
+.social-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgb(136, 223, 143);
+  backdrop-filter: blur(6px);
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  transition: 
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.social-nav a:hover {
+  transform: translateY(-4px);
+  background: rgb(255, 255, 255);
+  color: #fff;
+}

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selva Lacandona — Presentación Interactiva</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(180deg, #0a3017, #145a2f);
+        color: white;
+        overflow-x: hidden;
+    }
+
+    header {
+        text-align: center;
+        padding: 1.5rem;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    section {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    /* CARRUSEL */
+    .carrusel {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .tarjeta {
+        min-width: 250px;
+        background: #f4fff2;
+        color: #123;
+        padding: 1rem;
+        border-radius: 12px;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+        transition: transform .3s;
+    }
+
+    .tarjeta:hover {
+        transform: scale(1.05);
+    }
+
+    .tarjeta img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    /* SVG */
+    .svg-container {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* DIALOG */
+    dialog {
+        border: none;
+        border-radius: 12px;
+        padding: 1.5rem;
+        max-width: 380px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    dialog::backdrop {
+        background: rgba(0,0,0,0.6);
+    }
+
+    button {
+        margin-top: 1rem;
+        padding: .5rem 1rem;
+        border: none;
+        background: #106b34;
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Selva Lacandona</h1>
+    <p>Explora algunos de sus mamíferos más representativos</p>
+</header>
+
+<!-- SECCIÓN PRINCIPAL CON CARRUSEL -->
+<section>
+    <h2>Mamíferos Destacados</h2>
+    <div class="carrusel">
+
+    <div class="tarjeta" data-animal="jaguar">
+        <img src="Extras/jaguar.jpg">
+        <h3>Jaguar</h3>
+    </div>
+
+    <div class="tarjeta" data-animal="tapir">
+        <img src="Extras/tapir.jpg">
+        <h3>Tapir</h3>
+    </div>
+
+    <div class="tarjeta" data-animal="ocelote">
+        <img src="Extras/ocelote.jpg">
+        <h3>Ocelote</h3>
+    </div>
+
+    <div class="tarjeta" data-animal="mono">
+        <img src="Extras/mono araña.jpg">
+        <h3>Mono Araña</h3>
+    </div>
+
+    <div class="tarjeta" data-animal="venado">
+        <img src="Extras/venado cola blanca.jpg">
+        <h3>Venado Cola Blanca</h3>
+    </div>
+
+    <div class="tarjeta" data-animal="pecari">
+        <img src="Extras/pecari de collar.jpg">
+        <h3>Pecarí de Collar</h3>
+    </div>
+
+    <div class="tarjeta" data-animal="mapache">
+        <img src="Extras/mapache.jpg">
+        <h3>Mapache</h3>
+    </div>
+
+    <div class="tarjeta" data-animal="coati">
+        <img src="Extras/coati.jpg">
+        <h3>Coatí</h3>
+    </div>
+
+    <div class="tarjeta" data-animal="armadillo">
+        <img src="Extras/armadillo nueve bandas.jpg">
+        <h3>Armadillo Nueve Bandas</h3>
+    </div>
+
+    <div class="tarjeta" data-animal="tamandua">
+        <img src="Extrasoso hormiguero menor.jpg">
+        <h3>Oso Hormiguero Menor</h3>
+    </div>
+
+    <div class="tarjeta" data-animal="tlacuache">
+        <img src="Extras/tlacuache comun.jpg">
+        <h3>Tlacuache Común</h3>
+    </div>
+
+    <div class="tarjeta" data-animal="cacomixtle">
+        <img src="Extras/cacomixtle.jpg">
+        <h3>Cacomixtle</h3>
+    </div>
+
+</div>
+</section>
+
+
+
+<!-- SECCIÓN CON SVG -->
+<section>
+    <h2>Icono SVG: Jaguar de la Selva</h2>
+    <div class="svg-container">
+        <svg width="200" height="200" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="#d4a343"/>
+            <circle cx="35" cy="40" r="8" fill="#000"/>
+            <circle cx="65" cy="40" r="8" fill="#000"/>
+            <path d="M30 65 Q50 80 70 65" stroke="#000" stroke-width="4" fill="none"/>
+            <circle cx="50" cy="55" r="3" fill="#000"/>
+        </svg>
+    </div>
+</section>
+
+<!-- DIALOGOS DE INFORMACION -->
+<dialog id="jaguar">
+    <h2>Jaguar</h2>
+    <p><strong>Nombre científico:</strong> Panthera onca</p>
+    <p>El felino más grande de América, símbolo de la Selva Lacandona.</p>
+    <button onclick="document.getElementById('jaguar').close()">Cerrar</button>
+</dialog>
+
+<dialog id="tapir">
+    <h2>Tapir Centroamericano</h2>
+    <p><strong>Nombre científico:</strong> Tapirus bairdii</p>
+    <p>Herbívoro grande, considerado una especie vulnerable en México.</p>
+    <button onclick="document.getElementById('tapir').close()">Cerrar</button>
+</dialog>
+
+<dialog id="ocelote">
+    <h2>Ocelote</h2>
+    <p><strong>Nombre científico:</strong> Leopardus pardalis</p>
+    <p>Pequeño felino nocturno conocido por su hermoso pelaje moteado.</p>
+    <button onclick="document.getElementById('ocelote').close()">Cerrar</button>
+</dialog>
+
+<dialog id="mono">
+    <h2>Mono Araña</h2>
+    <p><strong>Nombre científico:</strong> Ateles geoffroyi</p>
+    <p>Un primate ágil que usa su cola como una quinta extremidad.</p>
+    <button onclick="document.getElementById('mono').close()">Cerrar</button>
+</dialog>
+
+<dialog id="venado">
+    <h2>Venado Cola Blanca</h2>
+    <p><strong>Nombre científico:</strong> Odocoileus virginianus</p>
+    <p>Herbívoro abundante en áreas conservadas. Se alimenta de hojas, frutos y brotes tiernos.</p>
+    <button onclick="document.getElementById('venado').close()">Cerrar</button>
+</dialog>
+
+<dialog id="pecari">
+    <h2>Pecarí de Collar</h2>
+    <p><strong>Nombre científico:</strong> Pecari tajacu</p>
+    <p>Omnívoro social que vive en grupos. Muy común en la Selva Lacandona.</p>
+    <button onclick="document.getElementById('pecari').close()">Cerrar</button>
+</dialog>
+
+<dialog id="mapache">
+    <h2>Mapache</h2>
+    <p><strong>Nombre científico:</strong> Procyon lotor</p>
+    <p>Omnívoro oportunista, excelente trepador y muy adaptable.</p>
+    <button onclick="document.getElementById('mapache').close()">Cerrar</button>
+</dialog>
+
+<dialog id="coati">
+    <h2>Coatí</h2>
+    <p><strong>Nombre científico:</strong> Nasua narica</p>
+    <p>Vive en grupos y se alimenta de insectos, frutas y pequeños vertebrados.</p>
+    <button onclick="document.getElementById('coati').close()">Cerrar</button>
+</dialog>
+
+<dialog id="armadillo">
+    <h2>Armadillo Nueve Bandas</h2>
+    <p><strong>Nombre científico:</strong> Dasypus novemcinctus</p>
+    <p>Insectívoro terrestre que excava madrigueras. Común en zonas bajas.</p>
+    <button onclick="document.getElementById('armadillo').close()">Cerrar</button>
+</dialog>
+
+<dialog id="tamandua">
+    <h2>Oso Hormiguero Menor</h2>
+    <p><strong>Nombre científico:</strong> Tamandua mexicana</p>
+    <p>Come hormigas y termitas. Excelente trepador y de hábitos solitarios.</p>
+    <button onclick="document.getElementById('tamandua').close()">Cerrar</button>
+</dialog>
+
+<dialog id="tlacuache">
+    <h2>Tlacuache Común</h2>
+    <p><strong>Nombre científico:</strong> Didelphis marsupialis</p>
+    <p>Marsupial omnívoro, muy adaptable y nocturno.</p>
+    <button onclick="document.getElementById('tlacuache').close()">Cerrar</button>
+</dialog>
+
+<dialog id="cacomixtle">
+    <h2>Cacomixtle</h2>
+    <p><strong>Nombre científico:</strong> Bassariscus sumichrasti</p>
+    <p>Omnívoro nocturno, ágil trepador y muy sigiloso.</p>
+    <button onclick="document.getElementById('cacomixtle').close()">Cerrar</button>
+</dialog>
+
+
+<script>
+    // Abrir diálogo según la tarjeta seleccionada
+    document.querySelectorAll(".tarjeta").forEach(t => {
+        t.addEventListener("click", () => {
+            const animal = t.dataset.animal;
+            document.getElementById(animal).showModal();
+        });
+    });
+</script>
+
+</body>
+</html>
